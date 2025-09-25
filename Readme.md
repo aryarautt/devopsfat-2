@@ -23,30 +23,26 @@ The file was created using `notepad Readme.md`. It contains the following defini
 **3. How was the `script.sh` file created and what are its contents?**
 
 The script was created with `notepad script.sh` to automate system information gathering. During its creation, the Linux `free -h` command was found to be incompatible with the Git Bash environment, so a solution was implemented using `systeminfo | grep`. The final script is:
-\`\`\`bash
-#!/bin/bash
-echo "--- Present Working Directory ---"; pwd; echo ""
-echo "--- Current User ---"; whoami; echo ""
-echo "--- System Memory Usage ---"; systeminfo | grep -E "Total Physical Memory|Available Physical Memory"; echo ""
-echo "--- Disk Space Usage ---"; df -h; echo ""
-echo "--- Files in This Directory ---"; ls -la; echo ""
-echo "--- Contents of This Script (script.sh) ---"; cat script.sh
-\`\`\`
+**\`\`\`bash
+**#!/bin/bash
+**echo "--- Present Working Directory ---"; pwd; echo ""
+**echo "--- Current User ---"; whoami; echo ""
+**echo "--- System Memory Usage ---"; systeminfo | grep -E "Total Physical Memory|Available Physical Memory"; echo ""
+**echo "--- Disk Space Usage ---"; df -h; echo ""
+**echo "--- Files in This Directory ---"; ls -la; echo ""
+**echo "--- Contents of This Script (script.sh) ---"; cat script.sh
+**\`\`\`
 
 **4. How was the script made executable?**
-
 The script was granted execute permissions using the Linux command: `chmod +x script.sh`.
 
 **5. How was the script executed and its output saved?**
-
 The script was run and its entire output was redirected to a log file using the command: `./script.sh > script.log`.
 
 **6. How was the GitHub repository created and initialized?**
-
 A new, empty repository was created on the GitHub website. The local \`exam\` directory was then turned into a Git repository using: \`git init\`.
 
 **7. How was branching and versioning handled to push the files?**
-
 All work was performed on a \`feature\` branch, created with \`git checkout -b feature\` to isolate it from the \`main\` branch. The three project files were then staged (\`git add .\`), committed with a descriptive message (\`git commit -m "..."\`), and pushed to the remote \`feature\` branch on GitHub (\`git push -u origin feature\`).
 
 ---
