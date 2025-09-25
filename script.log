@@ -1,0 +1,47 @@
+--- Present Working Directory ---
+/c/Users/ARYA RAUT/exam
+
+--- Current User ---
+ARYA RAUT
+
+--- System Memory Usage ---
+Total Physical Memory:         16,077 MB
+Available Physical Memory:     8,419 MB
+
+--- Disk Space Usage ---
+Filesystem            Size  Used Avail Use% Mounted on
+C:/Program Files/Git  475G  123G  353G  26% /
+
+--- Files in This Directory ---
+total 17
+drwxr-xr-x 1 ARYA RAUT 197121   0 Sep 25 11:23 .
+drwxr-xr-x 1 ARYA RAUT 197121   0 Sep 25 11:16 ..
+-rw-r--r-- 1 ARYA RAUT 197121   4 Sep 25 11:17 Readme.md
+-rw-r--r-- 1 ARYA RAUT 197121 360 Sep 25 11:29 script.log
+-rwxr-xr-x 1 ARYA RAUT 197121 415 Sep 25 11:28 script.sh
+
+--- Contents of This Script (script.sh) ---
+#!/bin/bash
+
+echo "--- Present Working Directory ---"
+pwd
+echo ""
+
+echo "--- Current User ---"
+whoami
+echo ""
+
+echo "--- System Memory Usage ---"
+systeminfo | grep -E "Total Physical Memory|Available Physical Memory"
+echo ""
+
+echo "--- Disk Space Usage ---"
+df -h
+echo ""
+
+echo "--- Files in This Directory ---"
+ls -la
+echo ""
+
+echo "--- Contents of This Script (script.sh) ---"
+cat script.sh
